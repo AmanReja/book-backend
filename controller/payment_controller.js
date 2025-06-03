@@ -5,8 +5,8 @@ const Payment = require("../model/paymentSchema"); // Import your Payment model
 
 // Initialize Razorpay instance with your credentials
 const razorpayInstance = new Razorpay({
-  key_id: "rzp_test_ND81BEh4gRO77Q", // Your Razorpay Key ID
-  key_secret: "your_key_secret" // Your Razorpay Key Secret
+  key_id: "rzp_test_eK44EjYxQcFhCQ", // Your Razorpay Key ID
+  key_secret: "9L3Pfyu1qWGBcEOam5DySAXg", // Your Razorpay Key Secret
 });
 
 // Create a payment order
@@ -37,7 +37,7 @@ router.post("/createPayment", async (req, res) => {
       brandname: req.body.brandname,
       quantity: req.body.quantity,
       brandimage: req.body.brandimage,
-      status: req.body.status
+      status: req.body.status,
     });
 
     console.log(43, payment);
