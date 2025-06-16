@@ -12,7 +12,7 @@ router.post("/addUser", async (req, res) => {
     // name: req.body.name,
     password: req.body.password,
     contact: req.body.contact,
-    image: req.body.image
+    image: req.body.image,
   });
 
   try {
@@ -37,7 +37,7 @@ router.post("/loginUser", async (req, res) => {
   const password = req.body.password;
   try {
     const data = await userSchema.find({ userid: userid, password: password });
-    res.json(data);
+    res.status(200).json(data);
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
