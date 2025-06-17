@@ -26,7 +26,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://book-backend-ust3.onrender.com",
   })
 );
 // app.use(express.static(path.join(__dirname, "build")));
