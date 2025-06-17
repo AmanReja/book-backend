@@ -26,7 +26,8 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: "https://book-backend-ust3.onrender.com",
+    origin: "https://front-book-mu.vercel.app", // Allow your frontend
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 // app.use(express.static(path.join(__dirname, "build")));
