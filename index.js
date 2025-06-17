@@ -24,12 +24,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(
-  cors({
-    origin: "https://front-book-mu.vercel.app", // Allow your frontend
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
-);
+app.use(cors());
 // app.use(express.static(path.join(__dirname, "build")));
 
 // app.get("*", (req, res) => {
